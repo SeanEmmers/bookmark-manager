@@ -3,7 +3,11 @@
 ## User Stories
 
 ```
-As a time-pressed user
-So that I can quickly go to web sites I regularly visit
+As a user
+So that I can see the to websites I regularly visit
 I would like to see a list of bookmarks
 ```
+
+## Domain Model
+
+[screenshot] (https://imgur.com/v6fHGkZ)
