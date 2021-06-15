@@ -3,10 +3,10 @@ require 'bookmarks'
 describe Bookmarks do
   
   
-  describe '#list' do
+  describe '.all' do
     it 'returns a list of bookmarks' do
-      bookmarks = Bookmarks.list
-      expect(bookmarks).to eq ["https://github.com/SeanEmmers/bookmark-manager", "https://www.uefa.com/uefaeuro-2020/"]
+      bookmarks = Bookmarks.all
+      expect(bookmarks).to include "http://www.askjeeves.com", "http://www.twitter.com", "http://www.google.com"
     end
   end
 end

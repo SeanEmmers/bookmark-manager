@@ -1,10 +1,11 @@
+require 'pg'
+
 class Bookmarks
 
-  def self.list
-    [ 
-      "https://github.com/SeanEmmers/bookmark-manager",
-      "https://www.uefa.com/uefaeuro-2020/"
-    ]
+  def self.all
+    connection = PG.connect(dbname: 'bookmark_manager')
+    results = connection.exec("SELECT * FROM bookmarks;") 
+    results.map { |bookmark| bookmark['url'] }
   end
 
 end 
