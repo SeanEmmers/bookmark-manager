@@ -19,6 +19,11 @@ Follow these same steps but create a second 'bookmark_manager_test' database
 As a user
 So that I can see the to websites I regularly visit
 I would like to see a list of bookmarks
+
+As a user
+So that I can have somewhere to save my bookmarks
+I would like to be able to add bookmarks to my bookmark manager
+
 ```
 
 ## Domain Model
