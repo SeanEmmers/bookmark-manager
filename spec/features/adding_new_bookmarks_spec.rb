@@ -2,8 +2,9 @@ feature 'adding new bookmarks' do
   scenario 'a new bookmark is added' do
     visit('/bookmarks/new')
     fill_in('url', with: 'http://test_bookmark.com')
+    fill_in('title', with: 'Test Bookmark')
     click_button('Submit')
 
-    expect(page).to have_content 'http://test_bookmark.com'
+    expect(page).to have_link('Test Bookmark', href:'http://test_bookmark.com')
   end
 end
