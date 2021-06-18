@@ -1,5 +1,6 @@
 feature 'adding new bookmarks' do
   scenario 'a new bookmark is added' do
+    setup_test_database
     visit('/bookmarks/new')
     fill_in('url', with: 'http://test_bookmark.com')
     fill_in('title', with: 'Test Bookmark')
