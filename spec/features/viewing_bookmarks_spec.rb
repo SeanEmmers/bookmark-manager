@@ -5,7 +5,6 @@ feature 'Viewing bookmarks' do
   end
 
   scenario 'viewing the bookmarks' do
-    setup_test_database
 
     Bookmark.create(url: "http://www.makersacademy.com", title: 'Makers Academy')
     Bookmark.create(url: "http://www.destroyallsoftware.com", title: 'Destroy all things')

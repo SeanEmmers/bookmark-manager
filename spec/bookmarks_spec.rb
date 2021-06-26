@@ -5,7 +5,6 @@ describe Bookmark do
 
   describe '.all' do
     it 'returns a list of bookmarks' do
-      setup_test_database
       connection = PG.connect(dbname: 'bookmark_manager_test')
 
      bookmark = Bookmark.create(url: "http://www.makersacademy.com", title: "Makers Academy")
@@ -24,7 +23,6 @@ describe Bookmark do
 
   describe '.create' do
     it 'creates a new bookmark' do
-      setup_test_database
       bookmark = Bookmark.create(url: 'http://www.testbookmark.com', title: 'Test Bookmark')
       persisted_data = PG.connect(dbname: 'bookmark_manager_test').query("SELECT * FROM bookmarks WHERE id = #{bookmark.id};")
     
@@ -37,7 +35,6 @@ describe Bookmark do
 
   describe '.delete' do
     it 'deletes the given bookmark' do
-      setup_test_database
       bookmark = Bookmark.create(title: 'Makers Academy', url: 'http://www.makersacademy.com')
 
       Bookmark.delete(id: bookmark.id)
